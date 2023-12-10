@@ -1,26 +1,36 @@
-# 📚 Comandos Git que facilitam o trabalho com o Git e o GitHub
+# 📚 Git
 
-## Alguns dos comandos mais úteis do Git:
+## 💻 Comandos Git que facilitam o trabalho com o Git e o GitHub
 
-- `git config`: Permite configurar valores de configuração específicos do usuário, como nome, e-mail, editor, ferramenta de merge, etc. Por exemplo, para definir o e-mail do usuário, pode-se usar `git config --global user.email sam@google.com`.
+### 🔍 Alguns dos comandos mais úteis do Git:
 
-- `git init`: Cria um novo repositório Git vazio no diretório atual. Por exemplo, para iniciar um repositório com o nome de "meu-projeto", pode-se usar `git init meu-projeto`.
-- `git clone`: Faz uma cópia exata de um repositório Git existente em outro local. Por exemplo, para clonar o repositório do GitHub "https://github.com/user/repo.git", pode-se usar `git clone https://github.com/user/repo.git`.
+O git é um sistema de controle de versão distribuído que permite gerenciar projetos de software de forma eficiente e colaborativa. Com o git, você pode criar, modificar, mesclar e compartilhar o código-fonte de seus programas com outros desenvolvedores.
 
-- `git add`: Adiciona os arquivos especificados à área de preparação (staged area), que é o local onde os arquivos ficam antes de serem commitados. Por exemplo, para adicionar o arquivo "meu_arquivo.txt" à área de preparação, pode-se usar `git add meu_arquivo.txt`.
+Para usar o git, você precisa instalar o programa em seu computador e configurar seu nome de usuário e e-mail. Você também pode usar o GitHub, uma plataforma online que hospeda repositórios git e facilita a colaboração.
 
-- `git commit`: Grava as alterações feitas nos arquivos da área de preparação no repositório local, criando um novo commit com uma mensagem descritiva. Por exemplo, para commitar o arquivo "meu_arquivo.txt" com a mensagem "minha mensagem de commit", pode-se usar `git commit meu_arquivo.txt -m "minha mensagem de commit"`.
+Um repositório git é um diretório que contém os arquivos e o histórico de um projeto. Você pode criar um repositório git localmente, usando o comando git init, ou clonar um repositório remoto, usando o comando git clone.
 
-- `git status`: Mostra o estado dos arquivos no diretório de trabalho e na área de preparação, indicando quais arquivos foram modificados, adicionados, removidos ou não rastreados pelo Git. Por exemplo, para ver o status dos arquivos, pode-se usar `git status`.
+Os principais comandos e atalhos do git são:
 
-- `git log`: Mostra o histórico de commits do repositório local, incluindo informações como o autor, a data, a mensagem e o hash de cada commit. Por exemplo, para ver o histórico de commits, pode-se usar `git log`.
 
-- `git branch`: Permite criar, listar, renomear ou excluir branches (ramos) do repositório local. Um branch é uma linha de desenvolvimento paralela que pode conter commits diferentes do branch principal. Por exemplo, para criar um novo branch chamado "meu-branch", pode-se usar `git branch meu-branch`.
+- `git status`: mostra o estado atual do seu repositório, indicando quais arquivos foram modificados, adicionados, removidos ou ignorados. Ele também mostra se você está em uma branch diferente da master, se você tem commits para enviar ou receber, e se você tem conflitos para resolver. É um comando útil para verificar o progresso do seu projeto e planejar os próximos passos.
 
-- `git checkout`: Permite mudar de um branch para outro, atualizando o diretório de trabalho e a área de preparação com os arquivos do branch escolhido. Por exemplo, para mudar para o branch "meu-branch", pode-se usar `git checkout meu-branch`.
+- `git add`: adiciona os arquivos modificados ou novos à área de preparação, que é uma área intermediária entre o seu repositório local e o remoto. Você pode usar `git add .` para adicionar todos os arquivos do diretório atual, ou `git add -A` para adicionar todos os arquivos do repositório.
 
-- `git merge`: Permite combinar dois branches, aplicando as alterações de um branch no outro. Por exemplo, para mesclar o branch "meu-branch" no branch "main", pode-se usar `git checkout main` e depois `git merge meu-branch`.
+- `git commit`: cria um registro permanente das mudanças que você fez na área de preparação, com uma mensagem descritiva. Você pode usar `git commit -m "mensagem"` para escrever a mensagem na linha de comando, ou `git commit -a` para adicionar e registrar todos os arquivos modificados em um único passo.
 
-- `git push`: Permite enviar os commits do repositório local para um repositório remoto, como o GitHub. Por exemplo, para enviar os commits do branch "main" para o repositório remoto "origin", pode-se usar `git push origin main`.
+- `git push`: envia os commits que você fez no seu repositório local para o repositório remoto, sincronizando as duas versões do projeto. Você pode usar `git push origin master` para enviar os commits da sua branch master para a branch master do repositório remoto chamado origin, ou `git push -u origin master` para fazer o mesmo e também definir a branch remota como a branch padrão para futuros pushes.
 
-- `git pull`: Permite receber os commits de um repositório remoto para o repositório local, atualizando o branch atual com as alterações do remoto. Por exemplo, para receber os commits do repositório remoto "origin" para o branch "main", pode-se usar `git pull origin main`.
+- `git pull`: recebe os commits que foram feitos no repositório remoto e os mescla com o seu repositório local, atualizando o seu projeto. Você pode usar `git pull origin master` para receber e mesclar os commits da branch master do repositório remoto chamado origin com a sua branch master local, ou `git pull --rebase origin master` para fazer o mesmo e também reescrever o histórico do seu repositório local para evitar conflitos.
+
+- `git branch`: lista as branches (ramificações) do seu repositório local, que são versões paralelas do projeto que podem conter mudanças diferentes. Você pode usar `git branch nome` para criar uma nova branch chamada nome, ou `git branch -d nome` para deletar uma branch chamada nome.
+
+- `git checkout`: muda a branch ativa do seu repositório local, que é a versão do projeto que você está trabalhando. Você pode usar `git checkout nome` para mudar para a branch chamada nome, ou `git checkout -b nome` para criar e mudar para uma nova branch chamada nome.
+
+- `git merge`: combina as mudanças de duas branches diferentes, criando um novo commit que representa o estado final do projeto. Você pode usar `git merge nome` para mesclar a branch chamada nome com a branch ativa, ou `git merge --abort` para cancelar uma mesclagem que gerou conflitos.
+
+- `git log`: mostra o histórico de commits do seu repositório local, com informações como o autor, a data, a mensagem e o código identificador de cada commit. Você pode usar `git log --oneline` para mostrar uma versão resumida do histórico, ou `git log --graph` para mostrar uma representação gráfica das branches e dos merges.
+
+- `git diff`: mostra as diferenças entre os arquivos do seu repositório local, indicando quais linhas foram adicionadas, removidas ou alteradas. Você pode usar `git diff` para mostrar as diferenças entre o seu diretório de trabalho e a área de preparação, ou `git diff --staged` para mostrar as diferenças entre a área de preparação e o último commit.
+
+- `git reset`: desfaz as mudanças que você fez no seu repositório local, restaurando o estado anterior do projeto. Você pode usar `git reset --soft codigo` para desfazer os commits até o commit identificado pelo código, mantendo as mudanças na área de preparação, ou `git reset --hard codigo` para desfazer os commits e as mudanças até o commit identificado pelo código, descartando tudo o que foi feito depois dele.
